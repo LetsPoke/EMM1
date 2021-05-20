@@ -18,7 +18,7 @@ public class CoinScript : MonoBehaviour
     void Update()
     {
         angle++;
-        this.transform.rotation = Quaternion.Euler(new Vector3(90f,angle,0f));
+        this.transform.rotation = Quaternion.Euler(new Vector3(90f,angle/2,0f));
     }
     private void OnTriggerEnter(Collider other) {
         //StartCoroutine(WaitForSeconds());

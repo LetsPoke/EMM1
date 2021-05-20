@@ -14,8 +14,10 @@ public class MonsterHunter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         scaleChange = new Vector3(0.01f, 0.01f, 0.01f);
         tempScore = score.score;
+        
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class MonsterHunter : MonoBehaviour
         transform.LookAt(player.transform);
 
         if(score.score > 0){
-            transform.position += transform.forward*movementSpeed;
+            transform.position += transform.forward*movementSpeed * Time.deltaTime;
         }
         
         if(tempScore != score.score){

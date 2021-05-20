@@ -29,14 +29,14 @@ public class ButtonEventHandler : MonoBehaviour
             player.position += -1 * movementSpeed * player.forward;
         }
         if(bright){
-            angle += 2f;
+            angle += 0.01f;
             Vector3 targetDirection = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle));
-            player.localRotation = Quaternion.LookRotation(targetDirection);
+            player.transform.rotation = Quaternion.LookRotation(targetDirection);
         }
         if(bleft){
-            angle += -2f;
+            angle -= 0.01f;
             Vector3 targetDirection2 = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle));
-            player.localRotation = Quaternion.LookRotation(targetDirection2);
+            player.transform.rotation = Quaternion.LookRotation(targetDirection2);
         }
     }
     

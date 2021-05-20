@@ -22,16 +22,16 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        angle += moveHorizontal*0.02f;
-        Vector3 targetDirection = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle));
+        angle += moveHorizontal*0.01f;
+        Vector3 targetDirection = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle) );
 
-        transform.localRotation = Quaternion.LookRotation(targetDirection);
+        transform.rotation = Quaternion.LookRotation(targetDirection);
         
-        transform.position += moveVertical * movementSpeed * transform.forward;
+        transform.position += moveVertical * movementSpeed * transform.forward * Time.deltaTime;
 
 
         if (Input.GetKeyDown("space")){
-            this.transform.localRotation = Quaternion.Euler(new Vector3(0f,0f,0f));
+            this.transform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));
         }
         
         scoreText.text = "Score: " + score;
