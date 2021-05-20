@@ -14,7 +14,7 @@ public class MonsterHunter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scaleChange = new Vector3(0.1f, 0.1f, 0.1f);
+        scaleChange = new Vector3(0.01f, 0.01f, 0.01f);
         tempScore = score.score;
     }
 

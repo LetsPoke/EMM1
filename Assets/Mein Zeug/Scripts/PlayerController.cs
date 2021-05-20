@@ -25,13 +25,13 @@ public class PlayerController : MonoBehaviour
         angle += moveHorizontal*0.02f;
         Vector3 targetDirection = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle));
 
-        transform.rotation = Quaternion.LookRotation(targetDirection);
+        transform.localRotation = Quaternion.LookRotation(targetDirection);
         
         transform.position += moveVertical * movementSpeed * transform.forward;
 
 
         if (Input.GetKeyDown("space")){
-            this.transform.rotation = Quaternion.Euler(new Vector3(0f,0f,0f));
+            this.transform.localRotation = Quaternion.Euler(new Vector3(0f,0f,0f));
         }
         
         scoreText.text = "Score: " + score;
