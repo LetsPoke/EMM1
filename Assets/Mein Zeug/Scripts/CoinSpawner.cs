@@ -16,8 +16,8 @@ public class CoinSpawner : MonoBehaviour
     void Start()
     {
         for(int i = 0; i < 25; i++){
-        int rand1 = UnityEngine.Random.Range(-25,25);
-        int rand2 = UnityEngine.Random.Range(-25,25);
+        int rand1 = UnityEngine.Random.Range(-150,150);
+        int rand2 = UnityEngine.Random.Range(-150,150);
         Instantiate(myPrefab,new Vector3(rand1,1,rand2),Quaternion.Euler(rotX,0f,0f),parent1);
     }
     
