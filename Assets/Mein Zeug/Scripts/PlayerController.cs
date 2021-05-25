@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
 
         angle += moveHorizontal*0.01f;
-        Vector3 targetDirection = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle) );
+        Vector3 targetDirection = new Vector3(Mathf.Sin(angle), 0f, Mathf.Cos(angle));
 
         transform.rotation = Quaternion.LookRotation(targetDirection);
         

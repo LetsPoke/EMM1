@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CoinSpawnerA2 : MonoBehaviour
+public class CoinSpawner : MonoBehaviour
 {
     [SerializeField] public Transform myPrefab;
     [SerializeField] public Transform parent1;
