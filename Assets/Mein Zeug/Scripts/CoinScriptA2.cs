@@ -15,10 +15,10 @@ public class CoinScriptA2 : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         angle++;
-        this.transform.rotation = Quaternion.Euler(new Vector3(90f,angle/8,0f)* Time.timeScale) ;
+        this.transform.rotation = Quaternion.Euler(new Vector3(90f,angle,0f)* Time.timeScale) ;
     }
     private void OnTriggerEnter(Collider other) {
         //StartCoroutine(WaitForSeconds());
